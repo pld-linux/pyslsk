@@ -23,8 +23,8 @@ BuildRequires:	rpm-pythonprov
 BuildArch:	noarch
 Requires:	python-wxPython >= 2.4.0
 Requires:	python-pyvorbis
-%{?_with_hyriand:Conflicts: %{name} = %{version}-%{_rel}}
-%{!?_with_hyriand:Conflicts: %{name} = %{version}-hyriand.%{_rel}}
+%{?_with_hyriand:Conflicts:	%{name} = %{version}-%{_rel}}
+%{!?_with_hyriand:Conflicts:	%{name} = %{version}-hyriand.%{_rel}}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
