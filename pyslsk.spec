@@ -1,13 +1,9 @@
-#
-# TODO:
-# pylibogg is needed
-#
 %include        /usr/lib/rpm/macros.python
 Summary:	Client for SoulSeek filesharing system
 Summary(pl):	Klient sieci SoulSeek
 Name:		pyslsk
 Version:	1.1.2
-Release:	0.2
+Release:	1	
 Source0:	%{name}-%{version}.tar.gz
 License:	GPL
 Group:		Development/Libraries
