@@ -9,7 +9,7 @@ License:	GPL
 Vendor:		Alexander Kanavin <ak@sensi.org>
 Group:		X11/Applications
 Source0:	http://www.sensi.org/~ak/pyslsk/%{name}-%{version}.tar.gz
-# Source0-md5:	c3e2ff7fc991c35cb9219bcadb6ac672
+# Source0-md5:	d457d7f66e6fd4830ee566f708d45cae
 Source1:	%{name}.desktop
 URL:		http://www.sensi.org/~ak/pyslsk/
 BuildRequires:	python-devel > 2.2
