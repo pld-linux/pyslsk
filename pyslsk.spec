@@ -20,7 +20,7 @@ URL:		http://www.sensi.org/~ak/pyslsk/
 BuildRequires:	python-devel > 2.2
 BuildRequires:	rpm-pythonprov
 BuildArch:	noarch
-Requires:	python-wxPython >= 2.3.4
+Requires:	python-wxPython >= 2.4.1
 Requires:	python-pyvorbis
 %{?_with_hyriand:Conflicts: %{name} = %{version}-%{_rel}}
 %{!?_with_hyriand:Conflicts: %{name} = %{version}-hyriand.%{_rel}}
