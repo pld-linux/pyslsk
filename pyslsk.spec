@@ -3,7 +3,7 @@ Summary:	Client for SoulSeek filesharing system
 Summary(pl):	Klient sieci SoulSeek
 Name:		pyslsk
 Version:	1.1.2
-Release:	1	
+Release:	2
 Source0:	http://www.sensi.org/~ak/%{name}/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 License:	GPL
@@ -31,10 +31,10 @@ python setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/%{_applnkdir}/Utilities/
+install -d $RPM_BUILD_ROOT/%{_applnkdir}/Network/Misc/
 
 python setup.py install --root=$RPM_BUILD_ROOT --record=INSTALLED_FILES
-install %{SOURCE1} $RPM_BUILD_ROOT/%{_applnkdir}/Utilities/
+install %{SOURCE1} $RPM_BUILD_ROOT/%{_applnkdir}/Network/Misc/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -42,4 +42,4 @@ rm -rf $RPM_BUILD_ROOT
 %files -f INSTALLED_FILES
 %defattr(-,root,root,755)
 %doc CHANGELOG COPYING INSTALL KNOWN_BUGS MAINTAINERS README README.import-winconfig TODO
-%{_applnkdir}/Utilities/%{name}.desktop
+%{_applnkdir}/Netowork/Misc/%{name}.desktop
