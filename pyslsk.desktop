@@ -1,10 +1,8 @@
 [Desktop Entry]
-Name=SoulSeek client
-Name[pl]=Klient SoulSeek
-Exec=soulseek
-#Icon=soulseek.png
+Name=pyslsk
+Comment=SoulSeek for Linux
+Exec=pyslsk
+#Icon=pyslsk.xpm
 Terminal=false
-MultipleArgs=false
 Type=Application
-Categories=Application;Utility;
-
+Categories=Application;Network;
