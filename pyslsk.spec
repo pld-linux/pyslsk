@@ -2,12 +2,13 @@
 # Conditional build
 # _with_hyriand - use patch from hydrian
 #
+%define		_rel	4
 %include        /usr/lib/rpm/macros.python
 Summary:	Client for SoulSeek filesharing system
 Summary(pl):	Klient sieci SoulSeek
 Name:		pyslsk
 Version:	1.1.2
-Release:	%{?_with_hyriand:hyriand.}3
+Release:	%{?_with_hyriand:hyriand.}%{_rel}
 License:	GPL
 Vendor:		Alexander Kanavin <ak@sensi.org>
 Group:		X11/Applications
@@ -20,6 +21,8 @@ BuildRequires:	rpm-pythonprov
 BuildArch:	noarch
 Requires:	python-wxPython >= 2.3.4
 Requires:	python-pyvorbis
+%{?_with_hyriand:Conflicts: %{name} = %{version}-%{_rel}}
+%{!?_with_hyriand:Conflicts: %{name} = %{version}-hyriand.%{_rel}}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
