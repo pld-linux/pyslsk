@@ -2,7 +2,7 @@
 Name=pyslsk
 Comment=SoulSeek for Linux
 Exec=pyslsk
-#Icon=pyslsk.xpm
+Icon=bird.jpg
 Terminal=false
 Type=Application
 Categories=Application;Network;
