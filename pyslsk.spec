@@ -42,4 +42,4 @@ rm -rf $RPM_BUILD_ROOT
 %files -f INSTALLED_FILES
 %defattr(-,root,root,755)
 %doc CHANGELOG COPYING INSTALL KNOWN_BUGS MAINTAINERS README README.import-winconfig TODO
-%{_applnkdir}/Netowork/Misc/%{name}.desktop
+%{_applnkdir}/Network/Misc/%{name}.desktop
