@@ -15,7 +15,7 @@ Group:		X11/Applications
 Source0:	http://www.sensi.org/~ak/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	1dc4e164c908be21c06a8858047d949e
 Source1:	%{name}.desktop
-#Patch0:		http://thegraveyard.org/%{naMe}/%{name}-%{version}-hyriand-1.7.patch
+Patch0:		http://thegraveyard.org/%{naMe}/%{name}-%{version}-hyriand-7.patch
 URL:		http://www.sensi.org/~ak/pyslsk/
 BuildRequires:	python-devel > 2.2
 BuildRequires:	rpm-pythonprov
