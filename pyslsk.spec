@@ -1,13 +1,13 @@
 #
 # TODO:
-# cleanups (?), pylibogg (?)
+# pylibogg is needed
 #
 %include        /usr/lib/rpm/macros.python
 Summary:	Client for SoulSeek filesharing system
 Summary(pl):	Klient sieci SoulSeek
 Name:		pyslsk
 Version:	1.1.2
-Release:	0.1
+Release:	0.2
 Source0:	%{name}-%{version}.tar.gz
 License:	GPL
 Group:		Development/Libraries
@@ -40,5 +40,5 @@ python setup.py install --root=$RPM_BUILD_ROOT --record=INSTALLED_FILES
 rm -rf $RPM_BUILD_ROOT
 
 %files -f INSTALLED_FILES
-%defattr(644,root,root,755)
+%defattr(-,root,root,755)
 %doc CHANGELOG COPYING INSTALL KNOWN_BUGS MAINTAINERS README README.import-winconfig TODO
