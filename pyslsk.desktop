@@ -7,3 +7,4 @@ Icon=bird.jpg
 Terminal=false
 Type=Application
 Categories=Application;Network;
+# vi: encoding=utf-8
