@@ -9,18 +9,18 @@ Name:		pyslsk
 Version:	1.1.2
 Release:	%{?_with_hyriand:hyriand.}3
 License:	GPL
-Vendor:         Alexander Kanavin <ak@sensi.org>
-Group:		Development/Libraries
+Vendor:		Alexander Kanavin <ak@sensi.org>
+Group:		X11/Applications
 Source0:	http://www.sensi.org/~ak/%{name}/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 Patch0:		http://thegraveyard.org/%{name}/%{name}-%{version}-hyriand-1.7.patch
-URL:            http://www.sensi.org/~ak/pyslsk/
+URL:		http://www.sensi.org/~ak/pyslsk/
 BuildRequires:	python-devel > 2.2
-BuildRequires:  rpm-pythonprov
+BuildRequires:	rpm-pythonprov
 BuildArch:	noarch
 Requires:	python-wxPython >= 2.3.4
 Requires:	python-pyvorbis
-BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 PySoulSeek is a client for SoulSeek filesharing system.
