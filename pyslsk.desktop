@@ -6,5 +6,5 @@ Exec=pyslsk
 Icon=bird.jpg
 Terminal=false
 Type=Application
-Categories=Application;Network;
+Categories=Network;P2P;
 # vi: encoding=utf-8
