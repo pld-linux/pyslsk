@@ -13,6 +13,7 @@ License:	GPL
 Vendor:		Alexander Kanavin <ak@sensi.org>
 Group:		X11/Applications
 Source0:	http://www.sensi.org/~ak/%{name}/%{name}-%{version}.tar.gz
+# Source0-md5:	d2bf40f6c98bb5ee34fe041231049818
 Source1:	%{name}.desktop
 Patch0:		http://thegraveyard.org/%{name}/%{name}-%{version}-hyriand-1.7.patch
 URL:		http://www.sensi.org/~ak/pyslsk/
