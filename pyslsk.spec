@@ -1,14 +1,19 @@
+#
+# Conditional build
+# _with_hyriand - use patch from hydrian
+#
 %include        /usr/lib/rpm/macros.python
 Summary:	Client for SoulSeek filesharing system
 Summary(pl):	Klient sieci SoulSeek
 Name:		pyslsk
 Version:	1.1.2
-Release:	2
+Release:	%{?_with_hyriand:hyriand.}3
 License:	GPL
 Vendor:         Alexander Kanavin <ak@sensi.org>
 Group:		Development/Libraries
 Source0:	http://www.sensi.org/~ak/%{name}/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
+Patch0:		http://thegraveyard.org/%{name}/%{name}-%{version}-hyriand-1.7.patch
 URL:            http://www.sensi.org/~ak/pyslsk/
 BuildRequires:	python-devel > 2.2
 BuildRequires:  rpm-pythonprov
@@ -25,6 +30,7 @@ PySoulSeek jest klientem sieci SoulSeek.
 
 %prep
 %setup -q
+%{?_with_hyriand:%patch0 -p1}
 
 %build
 python setup.py build
