@@ -17,6 +17,7 @@ BuildRequires:  rpm-pythonprov
 BuildRequires:	python-devel > 2.2
 BuildArch:	noarch
 Requires:	python-wxPython > 2.3
+Requires:	python-pyvorbis
 BuildRoot:      %{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
