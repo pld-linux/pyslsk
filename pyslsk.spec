@@ -2,25 +2,26 @@
 # Conditional build
 # _with_hyriand - use patch from hydrian
 #
-%define		_rel	4
+%define		_rel	1
+%define		_hyriand_rel	10.2
 %include        /usr/lib/rpm/macros.python
 Summary:	Client for SoulSeek filesharing system
 Summary(pl):	Klient sieci SoulSeek
 Name:		pyslsk
-version:	1.2.2
+version:	1.2.3
 Release:	%{?_with_hyriand:hyriand.}%{_rel}
 License:	GPL
 Vendor:		Alexander Kanavin <ak@sensi.org>
 Group:		X11/Applications
 Source0:	http://www.sensi.org/~ak/pyslsk/%{name}-%{version}.tar.gz
-# Source0-md5:	1dc4e164c908be21c06a8858047d949e
+# Source0-md5:	c3e2ff7fc991c35cb9219bcadb6ac672
 Source1:	%{name}.desktop
-Patch0:		http://thegraveyard.org/pyslsk/%{name}-%{version}-hyriand-7.patch
+Patch0:		http://thegraveyard.org/pyslsk/%{name}-%{version}-hyriand-%{_hyriand_rel}.patch
 URL:		http://www.sensi.org/~ak/pyslsk/
 BuildRequires:	python-devel > 2.2
 BuildRequires:	rpm-pythonprov
 BuildArch:	noarch
-Requires:	python-wxPython >= 2.4.1
+Requires:	python-wxPython >= 2.4.0
 Requires:	python-pyvorbis
 %{?_with_hyriand:Conflicts: %{name} = %{version}-%{_rel}}
 %{!?_with_hyriand:Conflicts: %{name} = %{version}-hyriand.%{_rel}}
@@ -41,11 +42,13 @@ python setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Network/Misc
+install -d $RPM_BUILD_ROOT%{_desktopdir}
+install -d $RPM_BUILD_ROOT%{_pixmapsdir}
 
 python setup.py install --root=$RPM_BUILD_ROOT --record=INSTALLED_FILES
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Network/Misc
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install img/bird.jpg $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -55,4 +58,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGELOG KNOWN_BUGS MAINTAINERS README README.import-winconfig TODO
 %attr(755,root,root) %{_bindir}/*
 %{py_sitedir}/pysoulseek
-%{_applnkdir}/Network/Misc/%{name}.desktop
+%{_desktopdir}/*
+%{_pixmapsdir}/*
