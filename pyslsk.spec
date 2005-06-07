@@ -2,18 +2,18 @@
 Summary:	Client for SoulSeek filesharing system
 Summary(pl):	Klient sieci SoulSeek
 Name:		pyslsk
-Version:	1.2.6
+Version:	1.2.7b
 Release:	1
 License:	GPL
 Vendor:		Alexander Kanavin <ak@sensi.org>
 Group:		X11/Applications
 Source0:	http://www.sensi.org/~ak/pyslsk/%{name}-%{version}.tar.gz
-# Source0-md5:	59fae6868c4bfb9568d21b27fa5ca051
+# Source0-md5:	c7a112eef6f59c4e9602cd4a9b3d9a31
 Source1:	%{name}.desktop
 URL:		http://www.sensi.org/~ak/pyslsk/
 BuildRequires:	python-devel > 2.2
 BuildArch:	noarch
-Requires:	python-wxPython >= 2.4.0
+Requires:	python-wxPython >= 2.6.0
 Requires:	python-pyvorbis
 %pyrequires_eq	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
