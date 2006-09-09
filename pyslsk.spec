@@ -12,6 +12,7 @@ Source0:	http://www.sensi.org/~ak/pyslsk/%{name}-%{version}.tar.gz
 Source1:	%{name}.desktop
 URL:		http://www.sensi.org/~ak/pyslsk/
 BuildRequires:	python-devel > 2.2
+BuildRequires:	rpm-pythonprov
 BuildArch:	noarch
 Requires:	python-wxPython >= 2.6.0
 Requires:	python-pyvorbis
