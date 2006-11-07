@@ -49,5 +49,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGELOG KNOWN_BUGS MAINTAINERS README README.import-winconfig TODO
 %attr(755,root,root) %{_bindir}/*
 %{py_sitescriptdir}/pysoulseek
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
