@@ -1,6 +1,6 @@
 #
 Summary:	Client for SoulSeek filesharing system
-Summary(pl.UTF-8):   Klient sieci SoulSeek
+Summary(pl.UTF-8):	Klient sieci SoulSeek
 Name:		pyslsk
 Version:	1.2.7b
 Release:	1
